@@ -1,3 +1,9 @@
+# revision 24028
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-gnuplot
+# catalog-date 2006-08-27 16:41:02 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-context-gnuplot
 Version:	20060827
 Release:	1
@@ -50,6 +56,7 @@ See the ConTeXt Garden package page for further details.
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/examples/fullpage-example.tex
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.pdf
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ See the ConTeXt Garden package page for further details.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
