@@ -18,8 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Enables simple creation and inclusion of graphs with Gnuplot.
@@ -27,24 +25,12 @@ The package writes a script into temporary file, runs Gnuplot
 and includes the resulting graphic directly into the document.
 See the ConTeXt Garden package page for further details.
 
-%pre
-    %_texmf_mtxrun_pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_mtxrun_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -56,7 +42,6 @@ See the ConTeXt Garden package page for further details.
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/examples/fullpage-example.tex
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.pdf
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,5 +52,3 @@ See the ConTeXt Garden package page for further details.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
