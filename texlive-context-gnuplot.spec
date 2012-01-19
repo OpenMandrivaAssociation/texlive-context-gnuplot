@@ -1,4 +1,4 @@
-# revision 24028
+# revision 25133
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-gnuplot
 # catalog-date 2006-08-27 16:41:02 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-gnuplot
 Version:	20060827
-Release:	2
+Release:	1
 Summary:	Inclusion of Gnuplot graphs in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-gnuplot
@@ -37,9 +37,9 @@ See the ConTeXt Garden package page for further details.
 %files
 %{_texmfdistdir}/metapost/context/third/gnuplot/mp-gnuplot.mp
 %{_texmfdistdir}/tex/context/third/gnuplot/t-gnuplot.tex
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/examples/example.plt
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/examples/fullpage-example.pdf
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/examples/fullpage-example.tex
+%doc %{_texmfdistdir}/doc/context/third/gnuplot/example.plt
+%doc %{_texmfdistdir}/doc/context/third/gnuplot/fullpage-example.pdf
+%doc %{_texmfdistdir}/doc/context/third/gnuplot/fullpage-example.tex
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.pdf
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.tex
 
