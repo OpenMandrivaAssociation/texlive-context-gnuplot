@@ -1,4 +1,4 @@
-# revision 27068
+# revision 27837
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-gnuplot
 # catalog-date 2006-08-27 16:41:02 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-gnuplot
 Version:	20060827
-Release:	5
+Release:	6
 Summary:	Inclusion of Gnuplot graphs in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-gnuplot
