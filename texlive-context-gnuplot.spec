@@ -1,4 +1,4 @@
-# revision 27068
+# revision 30380
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-gnuplot
 # catalog-date 2006-08-27 16:41:02 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-gnuplot
 Version:	20060827
-Release:	5
+Release:	6
 Summary:	Inclusion of Gnuplot graphs in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-gnuplot
@@ -36,7 +36,8 @@ See the ConTeXt Garden package page for further details.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/metapost/context/third/gnuplot/mp-gnuplot.mp
-%{_texmfdistdir}/tex/context/third/gnuplot/t-gnuplot.tex
+%{_texmfdistdir}/tex/context/third/gnuplot/t-gnuplot.mkii
+%{_texmfdistdir}/tex/context/third/gnuplot/t-gnuplot.mkiv
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/example.plt
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/fullpage-example.pdf
 %doc %{_texmfdistdir}/doc/context/third/gnuplot/fullpage-example.tex
@@ -52,29 +53,3 @@ See the ConTeXt Garden package page for further details.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 20060827-5
-+ Revision: 812149
-- Update to latest release.
-
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20060827-4
-+ Revision: 804540
-- Update to latest release.
-
-* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 20060827-3
-+ Revision: 762595
-- Update to latest upstream package
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20060827-2
-+ Revision: 750499
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20060827-1
-+ Revision: 718134
-- texlive-context-gnuplot
-- texlive-context-gnuplot
-- texlive-context-gnuplot
-- texlive-context-gnuplot
-
