@@ -1,18 +1,12 @@
-# revision 30380
-# category ConTeXt
-# catalog-ctan /macros/context/contrib/context-gnuplot
-# catalog-date 2006-08-27 16:41:02 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-context-gnuplot
-Version:	20170414
-Release:	2
+Version:	47085
+Release:	1
 Summary:	Inclusion of Gnuplot graphs in ConTeXt
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-gnuplot
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-gnuplot.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-gnuplot.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-gnuplot.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-gnuplot.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,27 +20,22 @@ and includes the resulting graphic directly into the document.
 See the ConTeXt Garden package page for further details.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/metapost/context/third/gnuplot/mp-gnuplot.mp
-%{_texmfdistdir}/tex/context/third/gnuplot/t-gnuplot.mkii
-%{_texmfdistdir}/tex/context/third/gnuplot/t-gnuplot.mkiv
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/example.plt
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/fullpage-example.pdf
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/fullpage-example.tex
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.pdf
-%doc %{_texmfdistdir}/doc/context/third/gnuplot/gnuplot-context-doc.tex
+%{_texmfdistdir}/metapost/context/third/gnuplot
+%{_texmfdistdir}/tex/context/third/gnuplot
+%doc %{_texmfdistdir}/doc/context/third/gnuplot
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
